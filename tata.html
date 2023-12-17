@@ -102,8 +102,8 @@
                                 columnDiv.classList.add("col-6", "col-sm-4", "col-md-3", "col-lg-3", "col-xl-2");
 
                                 const cardLink = document.createElement("a");
-                                cardLink.href = `https://techy-kuldeep-tataplay.vercel.app/play.html?videoUrl=${item.url}&licurl=${item.license_key}`;
-                                cardLink.target = "_blank";
+                                cardLink.href = `play.html?videoUrl=${item.url}&licurl=${item.license_key}`;
+				cardLink.target = "_blank";
 
                                 const cardDiv = document.createElement("div");
                                 cardDiv.classList.add("card");
