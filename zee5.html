@@ -1,621 +1,369 @@
+<script>
+  (function () {
+       (function a() {
+         try {
+           (function b(i) {
+             if (('' + (i / i)).length !== 1 || i % 20 === 0) {
+               (function () { }).constructor('debugger')()
+             } else {
+               debugger
+             }
+             b(++i)
+           }
+           )(0)
+         } catch (e) {
+           setTimeout(a, 0)
+         }
+       }
+       )()
+     }
+     )();
+   </script>
+   <script>
+  document.onkeydown = function(e) {
+    if(e.keyCode == 123) {
+     return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+     return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+     return false;
+    }
+    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+     return false;
+    }
 
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
+     return false;
+    }      
+   }
+  </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEE5 WEB</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpQ7cqawW9V6XmwN1nO7vTzQx-TOSF0avLXg">
+<meta name="robots" content="noindex">
+  <link rel="stylesheet" style="height:120" href="https://techy-kuldeep-disney-hotstar.vercel.app/TechyKuldeep.min.css">
+    <!-- <style>
+.col-sm-4{
 
+margin-top:1.2rem;
+}
+.col-sm-4 img{
+    border:2.7px solid black;
+   width:100%;
 
-<html>
+}
 
-	<head>
-		
-		<title>ZEE</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-		<link href="https://fonts.googleapis.com/css2?family=Gloock&amp;display=swap" rel="stylesheet">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-		<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&amp;display=swap" rel="stylesheet">
-		<link rel="shortcut icon" href="https://www.zee5.com/images/ZEE5_logo.svg?ver=3.12.10">
-		<link rel="stylesheet" href="style.css">
-		<!-- ===== Boxicons CSS ===== -->
-		<link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
-		<style>
-			body {
-			      /* display: flex; */
-			      align-items: center;
-			      justify-content: center;
-			      margin: 0 12px;
-			      height: 100%;
-			      background-color: #222;
-			
-			    }
-			
-			    .box-shadow {
-			      font-family: sans-serif;
-			      font-weight: 600;
-			      background-color: #222;
-			      color: white;
-			      padding: 10px;
-			      border-radius: 4px;
-			      box-shadow: 2px 2px 20px 23px #7fecad;
-			      background-color: #222;
-			      padding: 20px;
-			      border-radius: 10px;
-			      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-			      text-align: center;
-			      font-family: 'Arial', sans-serif;
-			      font-size: 15px;
-			      color: #333;
-			    }
-			
-			    #title {
-			      font-family: 'Gloock', serif;
-			      font-weight: bold;
-			      font-size: 28px;
-			      color: night;
-			      text-align: center;
-			      text-transform: uppercase;
-			      letter-spacing: 4px;
-			      margin: 20px 0;
-			      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-			      background-color: #222;
-			      padding: 10px 20px;
-			      border-radius: 10px;
-			      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-			    }
-			
-			    a. {
-			      text-decoration: none !important;
-			    }
-		</style>
-		<link rel="stylesheet" href="https://ipl-2023-schedule.pages.dev/jtv.css">
-		<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
-		
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" rel="stylesheet">
-		<link rel="stylesheet" href="style.css">
-	</head>
+.col-sm-4:hover .card-text  {
+    background: rgba(91, 91, 91, 0.2);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+border:2.7px solid;
+border-color:transparent  black  black  black;
+    color:black;
+} 
+.card-text {
 
-	<body data-sveltekit-preload-data="hover" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCJ9LCJ2ZXJzaW9uIjoiMS45LjEwIiwic2NvcmUiOjEwOTEwfV0=">
-		<div style="display: contents">
-  <header class="text-gray-600 body-font" style="margin: 20px;">
-    <h1 id="title">ZEE</h1>
-  </header>
-</div>
-		<main class="">
-			<title>TOGULS ZEE 5</title>
-			<div class="container" bis_skin_checked="1">
-				<div class="flex flex-row mb-3 ml-1 gap-3 justify-center align-middle" bis_skin_checked="1" style="margin: 25px;">
-  <input type="search" id="searchInput" class="relative w-[100%] col-span-4 block mx-4 rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-1.5 text-base font-normal text-neutral-700 outline-none transition duration-300 ease-in-out focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:text-neutral-600 dark:placeholder:text-neutral-700" placeholder="Search"></div>
-				
+    background-color: Plain black;
+    width:100%;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    text-align:center;
+    color:white;
+    font-weight:bold;
+    font-size:14px;
+}
+</style> -->
+</head>
+<body>
 
-<div id="listContainer" class="container grid place-items-center grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 mx-auto" bis_skin_checked="1">
-				
-
-<div class="box1" bis_skin_checked="1">
-<a href="https://t.me/togulsofficial" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://static.vecteezy.com/system/resources/previews/021/672/626/original/telegram-logo-transparent-free-png.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">join now</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center"></p></div>
-</div>
-</div>
+<div id="jtvh1">
+<a id="brand" href="#">
+<h1>TOGULS ZEE5 WEB</h1>
 </a>
 </div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=167" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_TV_HD.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee TV HD</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Entertainment</p></div>
-</div>
-</div>
-</a>
-</div>
+<center>
+<a href='https://telegram.me/togulsofficial' target='_blank'><img src="https://i.postimg.cc/L54y415d/telegram.png" height="50" width="150"></a>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=165" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Cinema_HD.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Cinema HD</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Movies</p></div>
+<!-- <a href='https://instagram.com/kuldeepjangid_5656/' target='_blank'><img src="https://i.postimg.cc/Y0XdvCLv/instagram.jpg" height="50" width="150"></a> -->
+ <br>
+ <br>
 </div>
-</div>
-</a>
-</div>
+</center>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=657" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Business.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Business</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Business News</p></div>
-</div>
-</div>
-</a>
-</div>
+ <!--==================================CHANNELS==============================-->
+ <div class="container" id="content">
+    <div id="list" class="row">
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=473" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Anmol.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Anmol</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Entertainment</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeetv/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/557.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE TV</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=445" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Marathi.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Marathi</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Entertainment</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeetvhd/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/63.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE TV HD</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=689" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Kannada.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Kannada</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Entertainment</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Andtv/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/578.png" style="height: 120px">
+            <div class="card-body">
+            <span>&TV</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=638" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Telugu.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Telugu</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Entertainment</p></div>
-</div>
-</div>
-</a>
-</div>
-			
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=628" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Tamil.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Tamil</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Entertainment</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Andtvhd/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/40.png" style="height: 120px">
+            <div class="card-body">
+            <span>&TV HD</span>
+            </div>
+            </a>
+            </div></div>
 
-	
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=625" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Bangla.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Bangla</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Entertainment</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeeanmol/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/523.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE ANMOL</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=414" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Yuva.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Yuva</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Entertainment</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeecinema/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/123.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE CINEMA</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=484" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Cinema.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Cinema</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Movies</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeecinemahd/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/503.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE CINEMA HD</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=487" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Classic.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Bollywood</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Movies</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Andpictures/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/148.png" style="height: 120px">
+            <div class="card-body">
+            <span>&pictures</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=488" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Action.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Action</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Movies</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Andpictureshd/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/267.png" style="height: 120px">
+            <div class="card-body">
+            <span>&pictures HD</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=413" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Cinemalu.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Cinemalu</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Movies</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeebollywood/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/175.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE BOLLYWOOD</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=415" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Anmol_Cinema.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Anmol Cinema</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Movies</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeeaction/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/100.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE ACTION</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=504" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_News.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee News</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">News</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeeanmolcinema/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/64.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE ANMOL CINEMA</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=442" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_24_Taas.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee 24 Taas</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">News</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeenews/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/259.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE NEWS</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=722" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Sarthak_TV.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Sarthak</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Entertainment</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeehindustan/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/514.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE HINDUSTAN</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=728" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Salaam.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Salaam</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Entertainment</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeebusiness/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/260.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE BUSINESS</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=153" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Talkies.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Talkies</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Movies</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Wion/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/255.png" style="height: 120px">
+            <div class="card-body">
+            <span>WION</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=685" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Bangla_Cinema.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Bangla Cinema</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Movies</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zing/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/517.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZING</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=724" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Kalinga.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Delhi NCR Haryana</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">News</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeesalaam/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/518.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE SALAAM</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=658" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_News_MP_Chattisgarh.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee News MP Chattisgarh</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">News</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeemarathi/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/251.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE MARATHI</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=661" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Purvaiya.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Bihar Jharkhand</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">News</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeemarathihd/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/501.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE MARATHI HD</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=659" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Rajasthan.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Rajasthan</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">News</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeetalkies/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/249.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE TALKIES</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=929" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_24_Kalak.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee 24 Kalak</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">News</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeetalkieshd/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/515.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE TALKIES HD</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=652" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_SANGAM.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Hindustan</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">News</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeebangla/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/522.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE BANGLA</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=654" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Punjabi_HP_Haryana.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Punjabi HP Haryana</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">News</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeebanglahd/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/522.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE BANGLA HD</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=572" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Living_Foodz.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee UP UK</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">News</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeebanglacinema/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/254.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE BANGLA CINEMA</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=1351" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_TV.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee TV</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Entertainment</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeetamil/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/257.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE TAMIL</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=1358" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Talkies_HD.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Talkies HD </h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Movies</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeecinemalu/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/252.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE CINEMALU</span>
+            </div>
+            </a>
+            </div></div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=1360" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Marathi_HD.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Marathi HD</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Entertainment</p></div>
-</div>
-</div>
-</a>
-</div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2"> 
+            <a href="https://toguls.vercel.app/plays.html?max=https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Zeekannada/default/index.m3u8"> <div class="card">
+            <img  src="https://tatalogo.pages.dev/675.png" style="height: 120px">
+            <div class="card-body">
+            <span>ZEE KANNADA</span>
+            </div>
+            </a>
+            </div></div>
+    </div>
+    </div>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=1977" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Bangla_HD.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Bangla HD</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Entertainment</p></div>
-</div>
-</div>
-</a>
-</div>
+<br><br>
+<!-----------------------------FOOTER-------------------------->
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=2256" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Thirai.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Thirai</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Movies</p></div>
-</div>
-</div>
-</a>
-</div>
+<scriptsrc="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=2742" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Kannada_News.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">Zee Kannada News</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">News</p></div>
-</div>
-</div>
-</a>
-</div>
+<script>
 
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=1839" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/And_Pictures.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">And Pictures</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Movies</p></div>
-</div>
-</div>
-</a>
-</div>
-
-<div class="box1" bis_skin_checked="1">
-<a href="https://sports247.eu.org/app/play.php?id=185" id="" data-sveltekit-preload-data="hover">
-<div class="card w-40 bg-gray-100 rounded-xl bg-base-100 shadow-lg h-48 mb-4 flex flex-col" bis_skin_checked="1">
-<img src="https://jiotvimages.cdn.jio.com/dare_images/images/And_Pictures_HD.png" loading="lazy" class="h-28 mt-5 m-auto opacity-100">
-<div class="mb-5 opacity-100" bis_skin_checked="1">
-<h2 class="text-center text-sm font-bold">And Pictures HD</h2>
-<div class="flex justify-center space-x-1" bis_skin_checked="1"><img src="1.svg" alt="">
-<p class="text-xs text-center">Movies</p></div>
-</div>
-</div>
-</a>
-</div>
-				</div>
-			</div>
-		</main>
-		<div id="svelte-announcer" aria-live="assertive" aria-atomic="true" style="position: absolute; left: 0px; top: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); overflow: hidden; white-space: nowrap; width: 1px; height: 1px;" bis_skin_checked="1"></div>
-		<script type="text/javascript" src="channel.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-		<script>
-		 // Get search input element
-  const searchInput = document.getElementById('searchInput');
-
-  // Add input event listener
-  searchInput.addEventListener('input', filterData);
-
-  // Search functionality
-  function filterData() {
-    const updatedSearchValue = searchInput.value.toLowerCase();
-
-    // Get all box elements
-    const boxes = document.querySelectorAll('.box1');
-
-    boxes.forEach((box) => {
-      const h2Text = box.querySelector('h2').textContent.toLowerCase();
-      const pText = box.querySelector('p').textContent.toLowerCase();
-
-      if (h2Text.includes(updatedSearchValue) || pText.includes(updatedSearchValue)) {
-        box.style.display = 'block'; // Show matching box
-      } else {
-        box.style.display = 'none'; // Hide non-matching box
-      }
-    });
-  }
-		</script>
-	</body>
-
-</html>
+function _0x25a1(_0x21256e,_0x3e0a3f){var _0x30ae57=_0x30ae();return _0x25a1=function(_0x25a147,_0x4a1ad8){_0x25a147=_0x25a147-0xa1;var _0x567a57=_0x30ae57[_0x25a147];return _0x567a57;},_0x25a1(_0x21256e,_0x3e0a3f);}function _0x30ae(){var _0x360d0c=['4357458YCxZyU','21HQlvZb','4536896qgYkxo','text','4720uDaiXY','4176772QzWgQw','8009110GLmivU','158296bKoCUZ','5EQjUtR','12843TAUixk','647102PBHZbL'];_0x30ae=function(){return _0x360d0c;};return _0x30ae();}(function(_0x2c395f,_0x4ca3c5){var _0x29f549=_0x25a1,_0x487ba8=_0x2c395f();while(!![]){try{var _0xd3f47c=parseInt(_0x29f549(0xa7))/0x1+parseInt(_0x29f549(0xa4))/0x2*(parseInt(_0x29f549(0xa9))/0x3)+parseInt(_0x29f549(0xa2))/0x4+parseInt(_0x29f549(0xa5))/0x5*(-parseInt(_0x29f549(0xa8))/0x6)+parseInt(_0x29f549(0xaa))/0x7+-parseInt(_0x29f549(0xa1))/0x8*(parseInt(_0x29f549(0xa6))/0x9)+-parseInt(_0x29f549(0xa3))/0xa;if(_0xd3f47c===_0x4ca3c5)break;else _0x487ba8['push'](_0x487ba8['shift']());}catch(_0x5a6da2){_0x487ba8['push'](_0x487ba8['shift']());}}}(_0x30ae,0x80057),$(document)['ready'](function(){var _0x48a7e2=_0x25a1;$('h3')[_0x48a7e2(0xab)]('Maxpro');}));
+function _0x27d6(){var _0x2157c1=['fast','40NpIIbn','keyup','#drop','ready','filter','2nYMRxS','1596690zLCMJI','826847APdMLu','toggle','1449236WpXNFQ','click','26223870pjKPhR','toLowerCase','6oqiwJe','591795kmMXji','.col-sm-4','2478261AWrbry','#menuimg','1026260bOeOhr'];_0x27d6=function(){return _0x2157c1;};return _0x27d6();}var _0x1b9977=_0x9e5f;function _0x9e5f(_0x1f7c72,_0x3585d5){var _0x27d61a=_0x27d6();return _0x9e5f=function(_0x9e5f6f,_0x59043a){_0x9e5f6f=_0x9e5f6f-0x1b9;var _0x239d40=_0x27d61a[_0x9e5f6f];return _0x239d40;},_0x9e5f(_0x1f7c72,_0x3585d5);}(function(_0x360b49,_0x102ac4){var _0x5335cb=_0x9e5f,_0x496e0e=_0x360b49();while(!![]){try{var _0x1a3788=-parseInt(_0x5335cb(0x1c4))/0x1+-parseInt(_0x5335cb(0x1cb))/0x2*(parseInt(_0x5335cb(0x1c2))/0x3)+-parseInt(_0x5335cb(0x1bb))/0x4+-parseInt(_0x5335cb(0x1cc))/0x5+parseInt(_0x5335cb(0x1bf))/0x6*(parseInt(_0x5335cb(0x1b9))/0x7)+-parseInt(_0x5335cb(0x1c6))/0x8*(-parseInt(_0x5335cb(0x1c0))/0x9)+parseInt(_0x5335cb(0x1bd))/0xa;if(_0x1a3788===_0x102ac4)break;else _0x496e0e['push'](_0x496e0e['shift']());}catch(_0x45fd68){_0x496e0e['push'](_0x496e0e['shift']());}}}(_0x27d6,0x82af9),$(document)[_0x1b9977(0x1c9)](function(){var _0x64fa0c=_0x1b9977;$('#search')['on'](_0x64fa0c(0x1c7),function(){var _0x1a1389=_0x64fa0c,_0x5bd6eb=$(this)['val']()[_0x1a1389(0x1be)]();$(_0x1a1389(0x1c1))[_0x1a1389(0x1ca)](function(){var _0xda73b0=_0x1a1389;$(this)[_0xda73b0(0x1ba)]($(this)['text']()[_0xda73b0(0x1be)]()['indexOf'](_0x5bd6eb)>-0x1);});});}),$(document)['ready'](function(){var _0x4632cd=_0x1b9977;$(_0x4632cd(0x1c3))[_0x4632cd(0x1bc)](function(){var _0x2499e9=_0x4632cd;$(_0x2499e9(0x1c8))['slideToggle'](_0x2499e9(0x1c5));});}));
+</script>
+</body></html>
